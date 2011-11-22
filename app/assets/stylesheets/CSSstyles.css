@@ -1,0 +1,99 @@
+﻿#background {
+	background-position: center;
+	background-size: 1600px;
+	background-color: #1E2D40;
+	color: #FFFFFF;
+}
+#center {
+	margin: 0px auto 0px auto;
+	width: 1200px;
+	font-family: arial, Helvetica, sans-serif;
+
+}
+
+#header {
+	background-position: left;
+	border-color: #CCCCCC;
+	box-shadow: 4px 4px 5px 2px #000000;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 150px;
+	width: 1200px;
+	position: relative;
+	border-top-style: groove;
+	border-right-style: groove;
+	border-left-style: groove;
+	background-color: #131D29;
+
+}
+#inheader {
+	height: 150px;
+	width: 350px;
+	
+
+}
+#rows {
+	border-color: #CCCCCC;
+	border-left-style: groove;
+	background-color: #131D29;
+	position: absolute;
+	height: 700px;
+	margin-right: 200px;
+	width: 1000px;
+}
+#top {
+	background-color: #1E2D40;
+	position: absolute;
+	height: 100px;
+	width: 1000px;
+	text-align: left;
+}
+#navbar {
+	height: 30px;
+	width: 1000px;
+	background-color: #2D3D54;
+}
+
+#row1 {
+
+	height: 300px;
+	margin-right: 200px;
+	margin-left: 25px;
+	margin-top: 100px;
+	width:950px; 
+	position: absolute;
+}
+#row2 {
+
+	height: 300px;
+	margin-top:400px;
+	margin-left: 25px;
+	width:950px;
+	position: absolute;
+}
+
+#sidebar {
+	border-color: #CCCCCC;
+	box-shadow: 4px 4px 5px 2px #000000;
+	border-right-style: groove;
+	background-color: #1E2D40;
+	width: 200px;
+	height: 700px;
+	margin-left: 1003px;
+	position: absolute;
+}
+#footer {
+	border-color: #CCCCCC;
+	box-shadow: 4px 4px 5px 2px #000000;
+	border-left-style: groove;
+	border-bottom-style: groove;
+	border-right-style: groove;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #1E2D40;
+	margin-top: 700px;
+	height: 120px;
+	width: 1200px;
+	position: relative;
+	text-align: center;
+}
