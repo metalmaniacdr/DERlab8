@@ -2,13 +2,45 @@
 <html>
 <head>
   <title><%= @title %></title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="background">
 
-<%= yield %>
+	<div id="center">
+		<div id="header">
+			<div id="inheader">
+				<%= render 'layouts/header' %>
+			</div>
+		</div>
 
+		<div id="rows">
+			<div id="top">
+				<div id="navbar">
+					<%= render 'layouts/navbar' %>
+				</div>
+
+			</div>
+
+
+			<div id="row1">
+				    	<%= yield %>
+			</div>
+
+			<div id="row2">
+			</div>
+		</div>
+
+		<div id="sidebar">
+		</div>
+
+		<div id="footer">
+				<%= render 'layouts/footer' %>
+		</div>
+	</div>
 </body>
+
+
+
 </html>
