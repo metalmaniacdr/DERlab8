@@ -1,10 +1,9 @@
 DERlab8::Application.routes.draw do
-  get "pages/home"
 
-  get "pages/contact"
-
-  get "pages/signin"
-
+  root :to => 'pages#home'
+  match '/contact', :to => 'pages#contact'
+  match '/signin', :to => 'pages#signin'
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

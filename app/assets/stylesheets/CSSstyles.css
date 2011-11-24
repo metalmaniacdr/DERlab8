@@ -1,6 +1,5 @@
 ﻿#background {
 	background-position: center;
-	background-size: 1600px;
 	background-color: #1E2D40;
 	color: #FFFFFF;
 }
@@ -29,7 +28,7 @@
 #inheader {
 	height: 150px;
 	width: 350px;
-	
+	margin: 0px auto 0px auto;
 
 }
 #rows {
@@ -42,36 +41,39 @@
 	width: 1000px;
 }
 #top {
+	font-size: 30px;
+	font-weight:bold;
 	background-color: #1E2D40;
 	position: absolute;
 	height: 100px;
 	width: 1000px;
-	text-align: left;
+	vertical-align: middle;
 }
 #navbar {
 	height: 30px;
 	width: 1000px;
 	background-color: #2D3D54;
 }
-
+#keys {
+	margin-left: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight:bold;
+}
+a{
+	text-decoration: none;
+	color: #6699FF;
+	vertical-align: middle;
+}
 #row1 {
-
-	height: 300px;
+	font-weight:bold;
+	height: 600px;
 	margin-right: 200px;
 	margin-left: 25px;
 	margin-top: 100px;
 	width:950px; 
 	position: absolute;
 }
-#row2 {
-
-	height: 300px;
-	margin-top:400px;
-	margin-left: 25px;
-	width:950px;
-	position: absolute;
-}
-
 #sidebar {
 	border-color: #CCCCCC;
 	box-shadow: 4px 4px 5px 2px #000000;
