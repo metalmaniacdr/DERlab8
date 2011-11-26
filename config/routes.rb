@@ -1,5 +1,5 @@
 DERlab8::Application.routes.draw do
-
+ 
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
   match '/signin', :to => 'pages#signin'
