@@ -11,7 +11,12 @@ class PagesController < ApplicationController
 
   def signin
     @title = 'Sign in'
-    @message = 'Sing in'
+    @message = 'Sign in'
+  end
+  
+  def signup
+    @title = 'Sign up'
+    @message = 'Sign up'
   end
 
 end
