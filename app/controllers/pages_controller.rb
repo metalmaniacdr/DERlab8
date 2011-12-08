@@ -14,9 +14,4 @@ class PagesController < ApplicationController
     @message = 'Sign in'
   end
   
-  def signup
-    @title = 'Sign up'
-    @message = 'Sign up'
-  end
-
 end
