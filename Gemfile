@@ -9,6 +9,7 @@ gem 'rails', '3.1.1'
 group :production do
   gem 'pg', '~> 0.11.0'
   #gem 'therubyracer-heroku', '~>0.8.1.pre3'
+  gem 'faker', '~> 1.0.1'
 end
 
 group :development, :test do
