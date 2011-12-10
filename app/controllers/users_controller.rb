@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def new
     @title = "Sign up"
     @user = User.new
+    @message = @title
   end
   
   def create 
@@ -10,12 +11,14 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
     else
       @title = "Sign up"
+      @message = @title
       render 'new'
     end
   end
   
    def show
     @user = User.find(params[:id])
-    @title = @user.fname + " " + @user.lname
+    @title = @user.first_name + " " + @user.last_name
+    @message = @title
   end
 end

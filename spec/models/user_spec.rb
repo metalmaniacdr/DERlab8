@@ -3,8 +3,8 @@ require 'spec_helper'
 describe User do
   before (:each) do
     @attr = {
-      :fname => "John", 
-      :lname => "Doe",  
+      :first_name => "John", 
+      :last_name => "Doe",  
       :email => "jdoe@cs.utsa.edu",
       :password => "john1",
       :password_confirmation => "john1"
@@ -16,25 +16,25 @@ describe User do
   end
   
   it "should require a first name" do
-    no_fname_user = User.new(@attr.merge(:fname => ""))
-    no_fname_user.should_not be_valid
+    no_first_name_user = User.new(@attr.merge(:first_name => ""))
+    no_first_name_user.should_not be_valid
   end
   
   it "should reject first names that are too long" do
-    long_fname = "a"*26
-    long_fname_user = User.new(@attr.merge(:fname => long_fname))
-    long_fname_user.should_not be_valid
+    long_first_name = "a"*26
+    long_first_name_user = User.new(@attr.merge(:first_name => long_first_name))
+    long_first_name_user.should_not be_valid
   end
     
   it "should require a last name" do
-    no_lname_user = User.new(@attr.merge(:lname => ""))
-    no_lname_user.should_not be_valid
+    no_last_name_user = User.new(@attr.merge(:last_name => ""))
+    no_last_name_user.should_not be_valid
   end
 
   it "should reject last names that are too long" do
-    long_lname = "a"*26
-    long_lname_user = User.new(@attr.merge(:lname => long_lname))
-    long_lname_user.should_not be_valid
+    long_last_name = "a"*26
+    long_last_name_user = User.new(@attr.merge(:last_name => long_last_name))
+    long_last_name_user.should_not be_valid
   end
   
   it "should require an email" do
