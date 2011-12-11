@@ -152,3 +152,22 @@ a{
   list-style: square;
 }
 
+.flash {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 90%;
+	border: 4px solid #669966;
+	margin-top: 30px;
+	padding: 20px;
+	font-weight: bold;
+	color: #336633;
+	background-color: #99CC99;
+}
+
+.flash.error {
+
+}
+
+
+
