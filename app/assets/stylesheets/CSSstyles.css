@@ -97,11 +97,58 @@ a{
 
 .field, .actions{
 	margin-bottom: 10px;
-	text-align: left;
+	text-align: right;
 	line-height: 2em
 }
 
 #content{
 	text-align: justify;
-	
 }
+.field_with_errors {
+  margin-top: 5px;
+  background-color: red;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #333;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  text-align: left;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  text-align: left;
+  font-size: 12px;
+  list-style: square;
+}
+
