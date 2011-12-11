@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user
+      flash[:success] = "Welcome to the Auto Store Service Scheduler!"
       redirect_to user
     end
   end
