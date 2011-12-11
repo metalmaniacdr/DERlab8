@@ -167,7 +167,9 @@ a{
 }
 
 .flash.error {
-
+	color: #660000;
+	background-color: #CC3333;
+	border-color: #990000;
 }
 
 

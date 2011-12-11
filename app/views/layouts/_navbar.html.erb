@@ -1,7 +1,12 @@
 <navbar>
-		<%= link_to 'Home', root_path%>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<%= link_to 'Sign in', signin_path %>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<%= link_to 'Contact', contact_path %>
+		<%= link_to 'Home', root_path%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% if signed_in? %>
+      		<%= link_to "Profile", current_user %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<% end %>
+		<%= link_to 'Contact', contact_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% if signed_in? %>
+     		<%= link_to "Sign out", signout_path, :method => :delete %>
+     	<% else %>
+     		<%= link_to "Sign in", signin_path %>
+     	<% end %>
 </navbar>

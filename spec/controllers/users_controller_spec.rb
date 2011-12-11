@@ -31,6 +31,7 @@ describe UsersController do
       response.should have_selector("title", :content => "Sign up")
     end
   end
+  
   describe "POST 'create'" do
 
     describe "failure" do
@@ -69,7 +70,12 @@ describe UsersController do
           post :create, :user => @attr
         end.should change(User, :count).by(1)
       end
-            
+      
+      it "should sign the user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
+      
       it "should redirect to the user show page" do
         post :create, :user => @attr
         response.should redirect_to(user_path(assigns(:user)))
