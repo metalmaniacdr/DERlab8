@@ -1,8 +1,8 @@
 <h1>Account information</h1>
-<% if current_user.admin? %>
+
 <p> Name: <%= @user.first_name + " " + @user.last_name %></p>
 
 <p> Email: <%= @user.email %></p>
-<% end %>
+
 <%= link_to 'Home',  root_path %>
 

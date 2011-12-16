@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :update, :show]
-  before_filter :correct_user, :only => [:edit, :update, :show]
-  before_filter :admin_user,   :only => [:index, :destroy]
+  before_filter :authenticate, :only => [:edit, :update, :show, :destroy, :index]
+  before_filter :correct_user, :only => [:edit, :update]
+  before_filter :admin_user,   :only => [:index, :destroy, :show]
   
   def new
     @title = "Sign up"
@@ -26,8 +26,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title = @user.first_name + " " + @user.last_name
     @message = @title
+    
   end
-  
+   
   def edit
     @title = "Edit user"
     @message = @title
