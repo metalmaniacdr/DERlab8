@@ -151,5 +151,21 @@ describe User do
     end
   end
   
+  describe "appointment associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @appt1 = Factory(:appointment, :user => @user, :created_at => 1.day.ago)
+      @appt2 = Factory(:appointment, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have an appointment attribute" do
+      @user.should respond_to(:appointments)
+    end
+    it "should have the right appointments in the right order" do
+      @user.appointments.should == [@appt1, @appt2]
+    end
+  end
+  
   
 end

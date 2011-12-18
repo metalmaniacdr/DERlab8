@@ -1,0 +1,33 @@
+<%= form_for @appointment do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  
+<table class="field">
+	<tr>
+	   	<td><%= f.label :year %></td>
+    	<td><%= f.text_field :year %></td>
+  	</tr>  
+	<tr>
+	   	<td><%= f.label :make %></td>
+    	<td><%= f.text_field :make %></td>
+  	</tr> 
+	<tr>
+	   	<td><%= f.label :model %></td>
+    	<td><%= f.text_field :model %></td>
+  	</tr> 
+	<tr>
+	   	<td><%= f.label :mileage %></td>
+    	<td><%= f.text_field :mileage %></td>
+  	</tr> 
+	<tr>
+	   	<td><%= f.label :date, "Appointment date" %></td>
+    	<td><%= f.text_field :date %></td>
+  	</tr>   
+	<tr>
+	   	<td><%= f.label :time, "Appointment time" %></td>
+    	<td><%= f.text_field :time %></td>
+  	</tr>    		  	
+	<tr> 	
+  	  <td></td><td></td><td><%= f.submit "Submit" %></td>
+  	</tr>  
+  
+<% end %>

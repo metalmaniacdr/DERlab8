@@ -6,3 +6,13 @@ Factory.define :user do |user|
   user.password              "john1"
   user.password_confirmation "john1"
 end
+
+Factory.define :appointment do |appointment|
+  appointment.year     =>  2011
+  appointment.make     =>  "Honda"
+  appointment.model    =>  "Civic"
+  appointment.mileage  =>  25000
+  appointment.date     =>  "12/16/2011" 
+  appointment.time     =>  "4:00pm"
+  appointment.association :user
+end

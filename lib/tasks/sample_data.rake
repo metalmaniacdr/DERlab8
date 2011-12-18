@@ -26,5 +26,21 @@ namespace :db do
                    :password => password,
                    :password_confirmation => password)
     end
+    
+    5.times do
+      User.all(:limit => 15).each do |user|
+        if !user.admin?
+          user.appointments.create!(:year => 2001,
+                                    :make => "Honda",
+                                    :model => "Civic",
+                                    :mileage => 150000,
+                                    :date => "12/28/2011",
+                                    :time => "12:45pm")
+        end
+      end
+    end
+    
+    
+    
   end
 end

@@ -6,8 +6,8 @@ describe UsersController do
   describe "GET 'show'" do
     
     before(:each) do
-      @user = Factory(:user)
-      test_sign_in(@user)
+      @user = Factory(:user, :admin => true)
+      test_sign_in(admin)
     end
 
     it "should be successful" do

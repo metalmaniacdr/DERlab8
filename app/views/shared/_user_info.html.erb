@@ -1,0 +1,9 @@
+<div>
+  <a href="<%= user_path(current_user) %>">
+
+      <%= current_user.first_name %> <%=  current_user.last_name %>: 
+
+      <%= pluralize(current_user.appointments.count, "appointment") %>
+
+  </a>
+</div>

@@ -1,8 +1,12 @@
-<h1>Account information</h1>
 
-<p> Name: <%= @user.first_name + " " + @user.last_name %></p>
+<p><strong>Name </strong><%= @user.first_name + " " + @user.last_name %></p>
+<p><strong/>Email </strong><%= @user.email %></p>
+<p><strong>Appointments </strong> <%= @user.appointments.count %></p>
 
-<p> Email: <%= @user.email %></p>
-
-<%= link_to 'Home',  root_path %>
+<% unless @user.appointments.empty? %>
+	<table class="appointments" summary="User appointments">
+   		<%= render @appointments %>
+	</table>
+	<%= will_paginate @appointments %>
+<% end %>
 

@@ -2,6 +2,7 @@ DERlab8::Application.routes.draw do
  
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :appointments, :only => [:create, :destroy]
 
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact'

@@ -1,3 +1,16 @@
+<% if signed_in? %>
+  <table>
+    <tr>
+      <td >
+        <h1>Make an Appointment</h1>
+        <%= render 'shared/appointment_form' %>
+      </td>
+      <td>
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
 
 <p><h3>The Web Service Appointment Scheduler from The Auto Store</h3></p>
 
@@ -11,3 +24,5 @@ service and courtesy rides.</p>
 
 </div>
 <p><br/><br/>New customers <%= link_to "Sign up here!", signup_path %></p>
+
+<% end %>

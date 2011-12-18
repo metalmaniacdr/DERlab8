@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @title = 'Home'
-    @message = 'W e l c o m e !'
+    @appointment = Appointment.new if signed_in?
   end
 
   def contact

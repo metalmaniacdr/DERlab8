@@ -3,6 +3,7 @@
   <% @users.each do |user| %>
     <li>
       <%= link_to "#{user.first_name} #{user.last_name}", user %>
+      | <%= user.appointments.count %> appointments
       | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
                              		  :title => "Delete #{user.first_name} #{user.last_name}" %>
     </li>
